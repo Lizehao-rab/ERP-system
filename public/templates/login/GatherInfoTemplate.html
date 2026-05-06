@@ -1,0 +1,50 @@
+<div class="gatherContent">
+
+    <div class="gatherInfoContainer">
+        <form class="gatherInfoBlock">
+            <h3 class="title align-center">完善您的企业信息</h3>
+            <div class="firstLastnameWrap">
+                <div class="control-group">
+                    <div class="controls">
+                        <div class="input-group">
+                            <input type="text"
+                                   name="firstName"
+                                   class="firstName"
+                                   placeholder="名字"
+                                   required
+                                   autofocus
+                                   maxlength="60"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controls">
+                        <div class="input-group">
+                            <input type="text"
+                                   name="lastName"
+                                   class="lastName"
+                                   placeholder="姓氏"
+                                   required
+                                   autofocus
+                                   maxlength="60"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group">
+                <input id="phone" placeholder="电话号码" class="forNum" type="text" required value="<%=user.mobilePhone ? user.mobilePhone.substr(1) : ''%>"/>
+                <div class="requiredField" data-hover="此项必填">*</div>
+            </div>
+            <div class="input-group">
+                <input id="companyName" placeholder="公司名称" value="<%=user.company%>"/>
+            </div>
+            <div class="input-group">
+                <input id="website" placeholder="公司官网" value="<%=user.website%>"/>
+            </div>
+            <button id="submit" class="btn blue gatherSubmitBtn">提交</button>
+        </form>
+    </div>
+
+</div>
+
+

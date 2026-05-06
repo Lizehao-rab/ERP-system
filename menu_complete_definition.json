@@ -1,0 +1,747 @@
+{
+  "menus": [
+    {
+      "_id": 1,
+      "mname": "Dashboard",
+      "href": "Dashboard",
+      "sequence": 1,
+      "parrent": null,
+      "single": true,
+      "link": true,
+      "visible": true,
+      "description": "系统仪表板",
+      "icon": "dashboard",
+      "subModules": []
+    },
+    {
+      "_id": 2,
+      "mname": "CRM",
+      "href": "CRM",
+      "sequence": 2,
+      "parrent": null,
+      "single": false,
+      "link": false,
+      "visible": true,
+      "description": "CRM系统 - 联系人、商机和客户管理",
+      "icon": "crm",
+      "subModules": [
+        {
+          "_id": 3,
+          "mname": "Persons",
+          "href": "Persons",
+          "sequence": 1,
+          "link": true,
+          "description": "联系人管理"
+        },
+        {
+          "_id": 4,
+          "mname": "Companies",
+          "href": "Companies",
+          "sequence": 2,
+          "link": true,
+          "description": "公司管理"
+        },
+        {
+          "_id": 5,
+          "mname": "Leads",
+          "href": "Leads",
+          "sequence": 3,
+          "link": true,
+          "description": "潜在客户/销售线索"
+        },
+        {
+          "_id": 6,
+          "mname": "Opportunities",
+          "href": "Opportunities",
+          "sequence": 4,
+          "link": true,
+          "description": "商机/销售机会"
+        },
+        {
+          "_id": 7,
+          "mname": "Tasks",
+          "href": "Tasks",
+          "sequence": 5,
+          "link": true,
+          "description": "任务/跟进任务"
+        },
+        {
+          "_id": 8,
+          "mname": "DealTasks",
+          "href": "DealTasks",
+          "sequence": 6,
+          "link": true,
+          "description": "交易任务"
+        }
+      ]
+    },
+    {
+      "_id": 9,
+      "mname": "Sales",
+      "href": "Sales",
+      "sequence": 3,
+      "parrent": null,
+      "single": false,
+      "link": false,
+      "visible": true,
+      "description": "销售管理 - 订单、报价和发票",
+      "icon": "sales",
+      "subModules": [
+        {
+          "_id": 10,
+          "mname": "Orders",
+          "href": "Orders",
+          "sequence": 1,
+          "link": true,
+          "description": "销售订单"
+        },
+        {
+          "_id": 11,
+          "mname": "Quotations",
+          "href": "Quotations",
+          "sequence": 2,
+          "link": true,
+          "description": "销售报价单"
+        },
+        {
+          "_id": 12,
+          "mname": "Invoices",
+          "href": "Invoices",
+          "sequence": 3,
+          "link": true,
+          "description": "销售发票"
+        },
+        {
+          "_id": 13,
+          "mname": "Payment Terms",
+          "href": "paymentTerms",
+          "sequence": 4,
+          "link": true,
+          "description": "付款条款设置"
+        }
+      ]
+    },
+    {
+      "_id": 14,
+      "mname": "Purchases",
+      "href": "Purchases",
+      "sequence": 4,
+      "parrent": null,
+      "single": false,
+      "link": false,
+      "visible": true,
+      "description": "采购管理 - 采购订单和发票",
+      "icon": "purchases",
+      "subModules": [
+        {
+          "_id": 15,
+          "mname": "Purchase Orders",
+          "href": "purchaseOrders",
+          "sequence": 1,
+          "link": true,
+          "description": "采购订单"
+        },
+        {
+          "_id": 16,
+          "mname": "Purchase Invoices",
+          "href": "purchaseInvoices",
+          "sequence": 2,
+          "link": true,
+          "description": "采购发票"
+        },
+        {
+          "_id": 17,
+          "mname": "Payments",
+          "href": "supplierPayments",
+          "sequence": 3,
+          "link": true,
+          "description": "供应商支付"
+        }
+      ]
+    },
+    {
+      "_id": 18,
+      "mname": "Inventory",
+      "href": "Inventory",
+      "sequence": 5,
+      "parrent": null,
+      "single": false,
+      "link": false,
+      "visible": true,
+      "description": "库存管理 - 产品和库存记录",
+      "icon": "inventory",
+      "subModules": [
+        {
+          "_id": 19,
+          "mname": "Products",
+          "href": "Products",
+          "sequence": 1,
+          "link": true,
+          "description": "产品管理"
+        },
+        {
+          "_id": 20,
+          "mname": "Goods Out Notes",
+          "href": "goodsOutNotes",
+          "sequence": 2,
+          "link": true,
+          "description": "出库单/发货记录"
+        },
+        {
+          "_id": 21,
+          "mname": "Goods In Notes",
+          "href": "goodsInNotes",
+          "sequence": 3,
+          "link": true,
+          "description": "入库单/收货记录"
+        }
+      ]
+    },
+    {
+      "_id": 22,
+      "mname": "Accounting",
+      "href": "Accounting",
+      "sequence": 6,
+      "parrent": null,
+      "single": false,
+      "link": false,
+      "visible": true,
+      "description": "财务管理 - 会计和财务报表",
+      "icon": "accounting",
+      "subModules": [
+        {
+          "_id": 23,
+          "mname": "Journal",
+          "href": "journal",
+          "sequence": 1,
+          "link": true,
+          "description": "日记账"
+        },
+        {
+          "_id": 24,
+          "mname": "Chart Of Accounts",
+          "href": "ChartOfAccount",
+          "sequence": 2,
+          "link": true,
+          "description": "科目表/会计科目"
+        },
+        {
+          "_id": 25,
+          "mname": "Journal Entries",
+          "href": "journalEntry",
+          "sequence": 3,
+          "link": true,
+          "description": "日记账条目/会计凭证"
+        },
+        {
+          "_id": 26,
+          "mname": "Cash Flow",
+          "href": "cashFlow",
+          "sequence": 4,
+          "link": true,
+          "description": "现金流报表"
+        },
+        {
+          "_id": 27,
+          "mname": "Balance Sheet",
+          "href": "balanceSheet",
+          "sequence": 5,
+          "link": true,
+          "description": "资产负债表"
+        },
+        {
+          "_id": 28,
+          "mname": "Profit And Loss",
+          "href": "profitAndLoss",
+          "sequence": 6,
+          "link": true,
+          "description": "损益表/利润表"
+        },
+        {
+          "_id": 29,
+          "mname": "Trial Balance",
+          "href": "trialBalance",
+          "sequence": 7,
+          "link": true,
+          "description": "试算表"
+        },
+        {
+          "_id": 30,
+          "mname": "Close Month",
+          "href": "closeMonth",
+          "sequence": 8,
+          "link": true,
+          "description": "期末结账"
+        },
+        {
+          "_id": 31,
+          "mname": "Cash Book",
+          "href": "cashBook",
+          "sequence": 9,
+          "link": true,
+          "description": "现金账簿"
+        },
+        {
+          "_id": 32,
+          "mname": "Cash Transfer",
+          "href": "cashTransfer",
+          "sequence": 10,
+          "link": true,
+          "description": "现金转账"
+        },
+        {
+          "_id": 33,
+          "mname": "Manual Entry",
+          "href": "manualEntry",
+          "sequence": 11,
+          "link": true,
+          "description": "手工凭证录入"
+        }
+      ]
+    },
+    {
+      "_id": 34,
+      "mname": "HR",
+      "href": "HR",
+      "sequence": 7,
+      "parrent": null,
+      "single": false,
+      "link": false,
+      "visible": true,
+      "description": "人力资源 - 员工、招聘和工资管理",
+      "icon": "hr",
+      "subModules": [
+        {
+          "_id": 35,
+          "mname": "Employees",
+          "href": "Employees",
+          "sequence": 1,
+          "link": true,
+          "description": "员工信息管理"
+        },
+        {
+          "_id": 36,
+          "mname": "Applications",
+          "href": "Applications",
+          "sequence": 2,
+          "link": true,
+          "description": "招聘应聘申请"
+        },
+        {
+          "_id": 37,
+          "mname": "Job Positions",
+          "href": "JobPositions",
+          "sequence": 3,
+          "link": true,
+          "description": "职位管理"
+        },
+        {
+          "_id": 38,
+          "mname": "Departments",
+          "href": "Departments",
+          "sequence": 4,
+          "link": true,
+          "description": "部门管理"
+        },
+        {
+          "_id": 39,
+          "mname": "Birthdays",
+          "href": "Birthdays",
+          "sequence": 5,
+          "link": true,
+          "description": "员工生日提醒"
+        },
+        {
+          "_id": 40,
+          "mname": "Vacations",
+          "href": "Vacation",
+          "sequence": 6,
+          "link": true,
+          "description": "员工假期/休假管理"
+        },
+        {
+          "_id": 41,
+          "mname": "Attendance",
+          "href": "Attendance",
+          "sequence": 7,
+          "link": true,
+          "description": "考勤管理"
+        },
+        {
+          "_id": 42,
+          "mname": "HR Dashboard",
+          "href": "HrDashboard",
+          "sequence": 8,
+          "link": true,
+          "description": "人力资源数据概览"
+        }
+      ]
+    },
+    {
+      "_id": 43,
+      "mname": "Manufacturing",
+      "href": "Manufacturing",
+      "sequence": 8,
+      "parrent": null,
+      "single": false,
+      "link": false,
+      "visible": true,
+      "description": "生产制造 - 工程包和生产管理",
+      "icon": "manufacturing",
+      "subModules": [
+        {
+          "_id": 44,
+          "mname": "Work Centers",
+          "href": "workCenters",
+          "sequence": 1,
+          "link": true,
+          "description": "工作中心/生产线"
+        },
+        {
+          "_id": 45,
+          "mname": "Routing",
+          "href": "routing",
+          "sequence": 2,
+          "link": true,
+          "description": "工艺路线/生产流程"
+        },
+        {
+          "_id": 46,
+          "mname": "Bill Of Materials",
+          "href": "billOfMaterials",
+          "sequence": 3,
+          "link": true,
+          "description": "物料清单/BOM"
+        },
+        {
+          "_id": 47,
+          "mname": "Stock Correction",
+          "href": "stockCorrections",
+          "sequence": 4,
+          "link": true,
+          "description": "库存调整"
+        },
+        {
+          "_id": 48,
+          "mname": "Stock Returns",
+          "href": "stockReturns",
+          "sequence": 5,
+          "link": true,
+          "description": "库存退货"
+        },
+        {
+          "_id": 49,
+          "mname": "Transfers",
+          "href": "transfer",
+          "sequence": 6,
+          "link": true,
+          "description": "库存调拨"
+        }
+      ]
+    },
+    {
+      "_id": 50,
+      "mname": "Projects",
+      "href": "Projects",
+      "sequence": 9,
+      "parrent": null,
+      "single": false,
+      "link": false,
+      "visible": true,
+      "description": "项目管理 - 项目、工程包和工时记录",
+      "icon": "projects",
+      "subModules": [
+        {
+          "_id": 51,
+          "mname": "Project Dashboard",
+          "href": "projectsDashboard",
+          "sequence": 1,
+          "link": true,
+          "description": "项目数据概览"
+        },
+        {
+          "_id": 52,
+          "mname": "Jobs",
+          "href": "Jobs",
+          "sequence": 2,
+          "link": true,
+          "description": "工程包/项目工作"
+        },
+        {
+          "_id": 53,
+          "mname": "Work Tracks",
+          "href": "wTrack",
+          "sequence": 3,
+          "link": true,
+          "description": "工时记录/时间追踪"
+        }
+      ]
+    },
+    {
+      "_id": 54,
+      "mname": "Reports",
+      "href": "Reports",
+      "sequence": 10,
+      "parrent": null,
+      "single": false,
+      "link": false,
+      "visible": true,
+      "description": "数据报表 - 业务分析和报告",
+      "icon": "reports",
+      "subModules": [
+        {
+          "_id": 55,
+          "mname": "Invoice Aging",
+          "href": "invoiceAging",
+          "sequence": 1,
+          "link": true,
+          "description": "发票账龄分析"
+        },
+        {
+          "_id": 56,
+          "mname": "Sales Reports",
+          "href": "salesReports",
+          "sequence": 2,
+          "link": true,
+          "description": "销售数据报表"
+        },
+        {
+          "_id": 57,
+          "mname": "Inventory Reports",
+          "href": "inventoryReport",
+          "sequence": 3,
+          "link": true,
+          "description": "库存数据报表"
+        },
+        {
+          "_id": 58,
+          "mname": "Salary Report",
+          "href": "salaryReport",
+          "sequence": 4,
+          "link": true,
+          "description": "工资报表"
+        }
+      ]
+    },
+    {
+      "_id": 59,
+      "mname": "Integrations",
+      "href": "integrations",
+      "sequence": 11,
+      "parrent": null,
+      "single": true,
+      "link": true,
+      "visible": true,
+      "description": "第三方系统集成",
+      "icon": "integrations",
+      "subModules": []
+    },
+    {
+      "_id": 60,
+      "mname": "Settings",
+      "href": "Settings",
+      "sequence": 12,
+      "parrent": null,
+      "single": false,
+      "link": false,
+      "visible": true,
+      "description": "系统设置 - 配置和权限管理",
+      "icon": "settings",
+      "subModules": [
+        {
+          "_id": 61,
+          "mname": "Organization Profile",
+          "href": "organizationSettings",
+          "sequence": 1,
+          "link": true,
+          "description": "组织信息设置"
+        },
+        {
+          "_id": 62,
+          "mname": "Products Configurations",
+          "href": "productSettings",
+          "sequence": 2,
+          "link": true,
+          "description": "产品参数配置"
+        },
+        {
+          "_id": 63,
+          "mname": "Employees Details",
+          "href": "settingsEmployee",
+          "sequence": 3,
+          "link": true,
+          "description": "员工相关设置"
+        },
+        {
+          "_id": 64,
+          "mname": "Access Profiles",
+          "href": "Profiles",
+          "sequence": 4,
+          "link": true,
+          "description": "访问权限管理"
+        },
+        {
+          "_id": 65,
+          "mname": "System Users",
+          "href": "Users",
+          "sequence": 5,
+          "link": true,
+          "description": "系统用户管理"
+        },
+        {
+          "_id": 66,
+          "mname": "Workflows",
+          "href": "Workflows",
+          "sequence": 6,
+          "link": true,
+          "description": "工作流配置"
+        },
+        {
+          "_id": 67,
+          "mname": "Dashboards",
+          "href": "dashboards",
+          "sequence": 7,
+          "link": true,
+          "description": "自定义仪表板"
+        }
+      ]
+    }
+  ],
+  "translations": {
+    "Dashboard": "仪表板",
+    "CRM": "CRM系统",
+    "Sales": "销售管理",
+    "Purchases": "采购管理",
+    "Inventory": "库存管理",
+    "Accounting": "财务管理",
+    "HR": "人力资源",
+    "Settings": "系统设置",
+    "Persons": "联系人",
+    "Companies": "公司",
+    "Leads": "潜在客户",
+    "Opportunities": "商机",
+    "Tasks": "任务",
+    "Orders": "销售订单",
+    "Quotations": "报价单",
+    "Invoices": "发票",
+    "Products": "产品",
+    "Payment Terms": "付款条款",
+    "Goods Out Notes": "出库单",
+    "Goods In Notes": "入库单",
+    "Purchase Orders": "采购订单",
+    "Purchase Invoices": "采购发票",
+    "Payments": "付款",
+    "Journal": "日记账",
+    "Chart Of Accounts": "科目表",
+    "Employees": "员工",
+    "Applications": "应聘申请",
+    "Job Positions": "职位",
+    "Departments": "部门",
+    "Projects": "项目管理",
+    "Project Dashboard": "项目概览",
+    "Jobs": "工程包",
+    "Work Tracks": "工时记录",
+    "Reports": "数据报表",
+    "Invoice Aging": "发票账龄",
+    "Birthdays": "生日",
+    "Vacations": "假勤",
+    "Attendance": "考勤",
+    "HR Dashboard": "人力资源概览",
+    "Integrations": "集成",
+    "Manual Entry": "手工录入",
+    "Chart of Accounts": "科目表",
+    "Journal Entries": "日记账",
+    "Cash Flow": "现金流",
+    "Balance Sheet": "资产负债表",
+    "Profit And Loss": "损益表",
+    "Trial Balance": "试算表",
+    "Close Month": "结账",
+    "Cash Book": "现金账簿",
+    "Cash Transfer": "现金转账",
+    "Manufacturing": "生产制造",
+    "Work Centers": "工作中心",
+    "Routing": "工艺路线",
+    "Bill Of Materials": "物料清单",
+    "Goods-out Notes": "出库单",
+    "Stock Correction": "库存调整",
+    "Stock Returns": "库存退货",
+    "Transfers": "库存调拨",
+    "General": "综合",
+    "Organization Profile": "组织信息",
+    "Products Configurations": "产品配置",
+    "Employees Details": "员工详情",
+    "Access Profiles": "访问权限",
+    "System Users": "系统用户",
+    "Workflows": "工作流",
+    "Dashboards": "仪表盘",
+    "DealTasks": "交易任务"
+  },
+  "href_mapping": {
+    "Dashboard": "Dashboard",
+    "CRM": "CRM",
+    "Sales": "Sales",
+    "Purchases": "Purchases",
+    "Inventory": "Inventory",
+    "Accounting": "Accounting",
+    "HR": "HR",
+    "Manufacturing": "Manufacturing",
+    "Projects": "Projects",
+    "Reports": "Reports",
+    "Integrations": "integrations",
+    "Settings": "Settings",
+    "Persons": "Persons",
+    "Companies": "Companies",
+    "Leads": "Leads",
+    "Opportunities": "Opportunities",
+    "Tasks": "Tasks",
+    "DealTasks": "DealTasks",
+    "Orders": "Orders",
+    "Quotations": "Quotations",
+    "Invoices": "Invoices",
+    "Payment Terms": "paymentTerms",
+    "Products": "Products",
+    "Goods Out Notes": "goodsOutNotes",
+    "Goods In Notes": "goodsInNotes",
+    "Purchase Orders": "purchaseOrders",
+    "Purchase Invoices": "purchaseInvoices",
+    "Journal": "journal",
+    "Chart Of Accounts": "ChartOfAccount",
+    "Journal Entries": "journalEntry",
+    "Cash Flow": "cashFlow",
+    "Balance Sheet": "balanceSheet",
+    "Profit And Loss": "profitAndLoss",
+    "Trial Balance": "trialBalance",
+    "Close Month": "closeMonth",
+    "Cash Book": "cashBook",
+    "Cash Transfer": "cashTransfer",
+    "Manual Entry": "manualEntry",
+    "Employees": "Employees",
+    "Applications": "Applications",
+    "Job Positions": "JobPositions",
+    "Departments": "Departments",
+    "Birthdays": "Birthdays",
+    "Vacations": "Vacation",
+    "Attendance": "Attendance",
+    "HR Dashboard": "HrDashboard",
+    "Work Centers": "workCenters",
+    "Routing": "routing",
+    "Bill Of Materials": "billOfMaterials",
+    "Stock Correction": "stockCorrections",
+    "Stock Returns": "stockReturns",
+    "Transfers": "transfer",
+    "Project Dashboard": "projectsDashboard",
+    "Jobs": "Jobs",
+    "Work Tracks": "wTrack",
+    "Invoice Aging": "invoiceAging",
+    "Sales Reports": "salesReports",
+    "Inventory Reports": "inventoryReport",
+    "Salary Report": "salaryReport",
+    "Organization Profile": "organizationSettings",
+    "Products Configurations": "productSettings",
+    "Employees Details": "settingsEmployee",
+    "Access Profiles": "Profiles",
+    "System Users": "Users",
+    "Workflows": "Workflows",
+    "Dashboards": "dashboards"
+  }
+}

@@ -1,0 +1,108 @@
+<ul class="menuList">
+    <% 
+        var translateMenu = function(str) {
+            var trans = {
+                "Dashboard": "仪表板",
+                "CRM": "CRM系统",
+                "Sales": "销售管理",
+                "Purchases": "采购管理",
+                "Inventory": "库存管理",
+                "Accounting": "财务管理",
+                "HR": "人力资源",
+                "Settings": "系统设置",
+                "Persons": "联系人",
+                "Companies": "公司",
+                "Leads": "潜在客户",
+                "Opportunities": "商机",
+                "Tasks": "任务",
+                "Orders": "销售订单",
+                "Quotations": "报价单",
+                "Invoices": "发票",
+                "Products": "产品",
+                "Payment Terms": "付款条款",
+                "Goods Out Notes": "出库单",
+                "Goods In Notes": "入库单",
+                "Purchase Orders": "采购订单",
+                "Purchase Invoices": "采购发票",
+                "Payments": "付款",
+                "Journal": "日记账",
+                "Chart Of Accounts": "科目表",
+                "Employees": "员工",
+                "Applications": "应聘申请",
+                "Job Positions": "职位",
+                "Departments": "部门",
+                "Projects": "项目管理",
+                "Project Dashboard": "项目概览",
+                "Jobs": "工程包",
+                "Work Tracks": "工时记录",
+                "Reports": "数据报表",
+                "Invoice Aging": "发票账龄",
+                "Birthdays": "生日",
+                "Vacations": "假勤",
+                "Attendance": "考勤",
+                "HR Dashboard": "人力资源概览",
+                "Integrations": "集成",
+                "Manual Entry": "手工录入",
+                "Chart of Accounts": "科目表",
+                "Journal Entries": "日记账",
+                "Cash Flow": "现金流",
+                "Balance Sheet": "资产负债表",
+                "Profit And Loss": "损益表",
+                "Trial Balance": "试算表",
+                "Close Month": "结账",
+                "Cash Book": "现金账簿",
+                "Cash Transfer": "现金转账",
+                "Manufacturing": "生产制造",
+                "Work Centers": "工作中心",
+                "Routing": "工艺路线",
+                "Bill Of Materials": "物料清单",
+                "Goods-out Notes": "出库单",
+                "Stock Correction": "库存调整",
+                "Stock Returns": "库存退货",
+                "Transfers": "库存调拨",
+                "General": "综合",
+                "Organization Profile": "组织信息",
+                "Products Configurations": "产品配置",
+                "Employees Details": "员工详情",
+                "Access Profiles": "访问权限",
+                "System Users": "系统用户",
+                "Workflows": "工作流",
+                "Dashboards": "仪表盘",
+            };
+            return trans[str] || str;
+        };
+    %>
+    <% _.forEach(menuList, function(parent, index){%>
+    <%var className = parent.single ? 'single' : '';%>
+<!--
+    <%var hrefNew = parent.single && parent.href === 'reports' ? 'salesReports' : parent.href;%>
+-->
+    <% var colorClass = '' %>
+
+    <% if (parent.href === 'integrations') { %>
+        <% colorClass = 'green'; %>
+    <% } %>
+    <li class="root<%=(parent.href===currentRoot)? ' active' + (!className ? ' opened' : '') :''%> <%=className%> <%= colorClass %>">
+        <!--<i class="fa fa-credit-card" aria-hidden="true"></i>-->
+        <i class="icons icon-<%=parent.href%>"></i>
+        <a href="#easyErp/<%=parent.href%>" class="<%=className%>"><%=translateMenu(parent.mname)%></a>
+
+        <%if (!className) {%>
+        <div class="subMenuListWrap">
+            <ul class="subMenuList">
+                <li>
+                    <a href="#easyErp/<%=parent.subModules[0].href%>" class="sub_item subItem "><%=translateMenu(parent.mname)%></a>
+                </li>
+                <% _.forEach(parent.subModules, function(child, index){%>
+
+                <li class="<%=(child.href===currentModule)?'selected':''%>">
+                    <a href="#easyErp/<%=child.href%>" class="subItem"><%=translateMenu(child.mname)%></a>
+                </li>
+                <%}) %>
+            </ul>
+        </div>
+        <%}%>
+
+    </li>
+    <%}) %>
+</ul>

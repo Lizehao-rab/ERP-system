@@ -1,0 +1,46 @@
+<nav>
+    <% 
+        var translateMenu = function(str) {
+            var trans = {
+                "Dashboard": "仪表板",
+                "CRM": "CRM系统",
+                "Sales": "销售管理",
+                "Purchases": "采购管理",
+                "Inventory": "库存管理",
+                "Accounting": "财务管理",
+                "HR": "人力资源",
+                "Settings": "系统设置",
+                "Persons": "联系人",
+                "Companies": "公司",
+                "Leads": "潜在客户",
+                "Opportunities": "商机",
+                "Tasks": "任务",
+                "Orders": "销售订单",
+                "Quotations": "报价单",
+                "Invoices": "发票",
+                "Products": "产品",
+                "Payment Terms": "付款条款",
+                "Goods Out Notes": "出库单",
+                "Goods In Notes": "入库单",
+                "Purchase Orders": "采购订单",
+                "Purchase Invoices": "采购发票",
+                "Payments": "付款",
+                "Journal": "日记账",
+                "Chart Of Accounts": "科目表",
+                "Employees": "员工",
+                "Applications": "应聘申请",
+                "Job Positions": "职位",
+                "Departments": "部门",
+                "Projects": "项目管理",
+                "Project Dashboard": "项目概览",
+                "Jobs": "工程包",
+                "Work Tracks": "工时记录",
+                "Reports": "数据报表"
+            };
+            return trans[str] || str;
+        };
+    %>
+    <ul>
+        <li><a href="javascript:;"><%= translateMenu(mname) %></a></li>
+    </ul>
+</nav>

@@ -1,0 +1,179 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js directionRTL" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title></title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/jquery.Jcrop.css" type="text/css"/>
+    <link rel="stylesheet" href="js/libs/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css"/>
+
+    <link rel="stylesheet" type="text/css" href="js/libs/bxslider-4/dist/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+
+    <!--<script src="https://cdn.flurry.com/js/flurry.js"></script>-->
+    <script data-main="js/main" src="https://www.google-analytics.com/analytics.js"></script>
+    <script src="js/libs/js-cookie/src/js.cookie.js"></script>
+
+    <script>
+        window.inboundrocket_ir_nonce = 'e4cc58fa80';
+    </script>
+    <script data-main="js/main" src="js/libs/require.js"></script>
+</head>
+<body>
+<div id="fb-root"></div>
+<div id="my-signin2"></div>
+
+<div id="errorHandler" class="notification"></div>
+<div id="wrapper" class="pageWrapper collapsed"></div>
+<div id="dialogContainer"></div>
+<!--<div id="helpContainer"></div>-->
+<div id="loading"></div>
+<div id="gatherView" class="hidden"></div>
+
+<script type="text/javascript">
+    window.onload = function () {
+        (function feedBack() {
+            var s = document.createElement("script");
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = '//api.usersnap.com/load/' + '5a968e74-88e2-4d68-be57-49c7e2ecee0d.js';  //Change only src if account chang
+            var x = document.getElementsByTagName('script')[0];
+
+            x.parentNode.insertBefore(s, x);
+
+            var interval = setInterval(function () {
+                var feedbackEl = document.getElementById('us_report_button');
+                var userSnap = document.getElementById('userSnap');
+
+                if (feedbackEl && userSnap) {
+                    userSnap.appendChild(feedbackEl);
+                    clearInterval(interval)
+                }
+            }, 100);
+        })();
+    }
+</script>
+<!-- 自动翻译脚本 -->
+<script type="text/javascript">
+    (function () {
+        var config = window.__AUTO_TRANSLATE_CONFIG || { enabled: true };
+        var storageKey = "easyerp:translate:enabled";
+        var enabled = typeof config.enabled === "boolean"
+            ? config.enabled
+            : (localStorage.getItem(storageKey) !== "0");
+
+        function ensureStyle() {
+            var style = document.createElement("style");
+            style.type = "text/css";
+            style.appendChild(document.createTextNode(
+                ".skiptranslate{display:none !important;}" +
+                "body{top:0 !important;}"
+            ));
+            document.head.appendChild(style);
+        }
+
+        function markNoTranslate(root) {
+            var selector = "input, textarea, select, [contenteditable='true'], pre, code, .CodeMirror, .CodeMirror *";
+            var nodes = (root || document).querySelectorAll(selector);
+            for (var i = 0; i < nodes.length; i++) {
+                if (nodes[i].classList && !nodes[i].classList.contains("notranslate")) {
+                    nodes[i].classList.add("notranslate");
+                }
+            }
+        }
+
+        function observeNewInputs() {
+            if (!window.MutationObserver) {
+                return;
+            }
+
+            var observer = new MutationObserver(function (mutations) {
+                for (var i = 0; i < mutations.length; i++) {
+                    var mutation = mutations[i];
+                    for (var j = 0; j < mutation.addedNodes.length; j++) {
+                        var node = mutation.addedNodes[j];
+                        if (node && node.nodeType === 1) {
+                            markNoTranslate(node);
+                        }
+                    }
+                }
+            });
+
+            observer.observe(document.body, { childList: true, subtree: true });
+        }
+
+        function loadGoogleTranslate() {
+            if (!enabled) {
+                return;
+            }
+
+            var holder = document.createElement("div");
+            holder.id = "google_translate_element";
+            holder.style.display = "none";
+            document.body.appendChild(holder);
+
+            window.googleTranslateElementInit = function () {
+                new window.google.translate.TranslateElement({
+                    pageLanguage: "en",
+                    includedLanguages: "zh-CN",
+                    autoDisplay: false
+                }, "google_translate_element");
+            };
+
+            document.cookie = "googtrans=/en/zh-CN; path=/";
+
+            var gtScript = document.createElement("script");
+            gtScript.type = "text/javascript";
+            gtScript.async = true;
+            gtScript.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+            document.head.appendChild(gtScript);
+        }
+
+        window.EasyErpTranslate = {
+            enable: function () {
+                localStorage.setItem(storageKey, "1");
+                location.reload();
+            },
+            disable: function () {
+                localStorage.setItem(storageKey, "0");
+                location.reload();
+            },
+            isEnabled: function () {
+                return enabled;
+            }
+        };
+
+        if (!enabled) {
+            return;
+        }
+
+        function onReady() {
+            ensureStyle();
+            markNoTranslate(document);
+            observeNewInputs();
+            loadGoogleTranslate();
+        }
+
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", onReady);
+        } else {
+            onReady();
+        }
+    })();
+</script>
+<!-- 自动翻译脚本 -->
+</body>
+</html>
